@@ -9,7 +9,7 @@ body {
 .container {
   max-width: 80%;
   margin: auto;
-  overflow: auto;
+  overflow: hidden;
 }
 
 header {
@@ -108,8 +108,8 @@ header a:active {
   padding: 10px;
 }
 
-#main-content sub-content .h2 {
-  font-family: Arial;
+#main-content .sub-content .h2 {
+  font-family: Arial, Helvetica;
 }
 
 #main-content .begin {
@@ -134,4 +134,25 @@ footer {
   background-color: #3b8beb;
   color: #ffffff;
   text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  header nav,
+  header nav li,
+  header #nav_title,
+  #upper-content p,
+  #main-content .sub-content{
+    float: none;
+    text-align: center;
+    width: 100%;
+  }
+
+  header {
+    padding: 20px;
+  }
+
+  #upper-content h1 {
+    margin: 30px;
+  }
+
 }
