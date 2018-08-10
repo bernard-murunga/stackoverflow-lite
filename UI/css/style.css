@@ -38,11 +38,15 @@ header li {
 
 header nav {
   float: right;
-  margin-top: 30px;
+  margin-top: 10px;
 }
 
 header #nav_title {
   float: left;
+}
+
+header #nav_title h1 {
+  font-size: 18px;
 }
 
 header #nav_title {
@@ -136,12 +140,89 @@ footer {
   text-align: center;
 }
 
-@media screen and (max-width: 768px) {
+#login-form {
+  margin-top: 10px;
+  padding-top: 10px;
+}
+
+#login-form form {
+  min-width: 60%;
+  padding: 10px 10px;
+  margin: 20px 200px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background: #357dd3;
+  color: #ffffff;
+  min-height: 400px;
+}
+
+form label {
+  min-width: 60%;
+  padding: 12px 20px;
+  margin: 8px 100px;
+}
+
+form input[type=email],
+input[type=password] {
+    min-width: 60%;
+    padding: 12px 20px;
+    margin: 10px 120px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+form .login-button {
+    background-color: #b23850;
+    color: white;
+    padding: 12px 20px;
+    margin: 10px 120px;
+    border: none;
+    min-width: 60%;
+    cursor: pointer;
+}
+
+.forgot {
+  float: right;
+  padding-right: 90px;
+  padding-top: 10px;
+  padding-left: 20px;
+}
+
+.forgot a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.new_member {
+  margin-top: 20px;
+  padding: 10px 20px 20px 90px;
+}
+
+.new_member a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+form input[type=checkbox] {
+  margin-top: 10px;
+}
+
+form h1 {
+  text-align: center;
+}
+
+
+/* media queries for tablets  */
+@media screen and (max-width: 1024px) {
   header nav,
   header nav li,
   header #nav_title,
-  #upper-content p,
-  #main-content .sub-content{
+  #upper-content,
+  #main-content .sub-content,
+  #login-form,
+  .forgot, .remember_me {
     float: none;
     text-align: center;
     width: 100%;
@@ -154,5 +235,39 @@ footer {
   #upper-content h1 {
     margin: 30px;
   }
+
+  #login-form form {
+    margin: 10px;
+  }
+
+
+}
+
+/* media queries for smartphones  */
+@media screen and (max-width: 480px) {
+  header nav,
+  header nav li,
+  header #nav_title,
+  #upper-content p,
+  #main-content .sub-content,
+  #login-form form,
+  .forgot, .remember_me {
+    float: none;
+    text-align: center;
+    width: 100%;
+  }
+
+  header {
+    padding: 20px;
+  }
+
+  #upper-content h1 {
+    margin: 30px;
+  }
+
+  #login-form form {
+    margin: 10px;
+  }
+
 
 }
