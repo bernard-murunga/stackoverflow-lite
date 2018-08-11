@@ -140,12 +140,12 @@ footer {
   text-align: center;
 }
 
-#login-form {
+#login-form #form{
   margin-top: 10px;
   padding-top: 10px;
 }
 
-#login-form form {
+#login-form #form {
   min-width: 60%;
   padding: 10px 10px;
   margin: 20px 200px;
@@ -157,14 +157,15 @@ footer {
   min-height: 400px;
 }
 
-form label {
+#login-form #form label {
   min-width: 60%;
   padding: 12px 20px;
   margin: 8px 100px;
 }
 
-form input[type=email],
-input[type=password] {
+#login-form #form input[type=email],
+#login-form #form input[type=password],
+#reset-form form input[type=email] {
     min-width: 60%;
     padding: 12px 20px;
     margin: 10px 120px;
@@ -173,9 +174,9 @@ input[type=password] {
     box-sizing: border-box;
 }
 
-form .login-button {
+#form .login-button {
     background-color: #b23850;
-    color: white;
+    color: #ffffff;
     padding: 12px 20px;
     margin: 10px 120px;
     border: none;
@@ -183,36 +184,153 @@ form .login-button {
     cursor: pointer;
 }
 
-.forgot {
+.post-form {
+  margin: 30px;
+  padding: 40px;
+}
+#sub-button {
+    background-color: #b23850;
+    color: #ffffff;
+    padding: 12px 20px;
+    margin: 10px 120px;
+    border: none;
+    min-width: 40%;
+    cursor: pointer;
+    font-style: 16px;
+}
+
+#form #forgot {
   float: right;
   padding-right: 90px;
   padding-top: 10px;
   padding-left: 20px;
 }
 
-.forgot a {
+#forgot a {
   color: #ffffff;
   text-decoration: none;
 }
 
-.new_member {
+#form #new_member {
   margin-top: 20px;
   padding: 10px 20px 20px 90px;
 }
 
-.new_member a {
+#new_member a {
   text-decoration: none;
   color: #ffffff;
 }
 
-form input[type=checkbox] {
+#form input[type=checkbox] {
   margin-top: 10px;
 }
 
-form h1 {
+#login-form #form h1 {
   text-align: center;
 }
 
+#signup-form #form-div {
+  margin-top: 10px;
+  padding-top: 10px;
+}
+
+#signup-form #form-div {
+  min-width: 60%;
+  padding: 10px 10px;
+  margin: 20px 200px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background: #357dd3;
+  color: #ffffff;
+  min-height: 400px;
+}
+
+#form-div label {
+  min-width: 60%;
+  padding: 12px 20px;
+  margin: 8px 100px;
+}
+
+#form-div input[type=text],
+#form-div input[type=email],
+#form-div input[type=password] {
+    min-width: 60%;
+    padding: 12px 20px;
+    margin: 10px 120px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+#form-div .signup-button {
+    background-color: #b23850;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 12px 20px;
+    margin: 10px 120px;
+    border: none;
+    min-width: 60%;
+    cursor: pointer;
+}
+
+.leftnav {
+  float: left;
+}
+
+.leftnav ul.sidenav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #357dd3;
+    min-height: 600px;
+}
+
+
+/* #leftnav ul.sidenav li {
+  float: left;
+} */
+
+.leftnav ul.sidenav li a {
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.leftnav .sidenav li a, .dropbtn {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  background-color: #b23850;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #357dd3;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
 
 /* media queries for tablets  */
 @media screen and (max-width: 1024px) {
@@ -222,7 +340,9 @@ form h1 {
   #upper-content,
   #main-content .sub-content,
   #login-form,
-  .forgot, .remember_me {
+  #form,
+  #form #forgot,
+  #form #remember_me {
     float: none;
     text-align: center;
     width: 100%;
@@ -236,9 +356,10 @@ form h1 {
     margin: 30px;
   }
 
-  #login-form form {
+  #login-form #form {
     margin: 10px;
   }
+
 
 
 }
@@ -250,8 +371,10 @@ form h1 {
   header #nav_title,
   #upper-content p,
   #main-content .sub-content,
-  #login-form form,
-  .forgot, .remember_me {
+  #login-form,
+  #form,
+  #form #forgot,
+  #form #remember_me{
     float: none;
     text-align: center;
     width: 100%;
@@ -265,7 +388,7 @@ form h1 {
     margin: 30px;
   }
 
-  #login-form form {
+  #login-form #form {
     margin: 10px;
   }
 
