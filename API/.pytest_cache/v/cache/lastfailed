@@ -1,0 +1,5 @@
+{
+  "tests/test_endpoints.py::test_fetch_question": true,
+  "tests/test_endpoints.py::test_post_answer": true,
+  "tests/test_endpoints.py::test_post_question": true
+}
