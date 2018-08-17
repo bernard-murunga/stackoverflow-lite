@@ -26,5 +26,13 @@ def not_found(error):
     return make_response(jsonify({'error': 'Not found'}), 404)
 
 
+@app.route('/questions/<int:question_id>', methods=['GET'])
+def get_question(question_id):
+    question = [question for question in questions if question['id'] == question_id]
+    if len(question) == 0:
+        abort(404)
+    return jsonify({'question': question[0]})
+
+
 if __name__ == '__main__':
     app.run(debug=True)

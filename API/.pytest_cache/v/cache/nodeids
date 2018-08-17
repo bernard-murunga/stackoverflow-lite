@@ -1,3 +1,4 @@
 [
-  "tests/test_endpoints.py::test_get_all_questions"
+  "tests/test_endpoints.py::test_get_all_questions",
+  "tests/test_endpoints.py::test_fetch_question"
 ]

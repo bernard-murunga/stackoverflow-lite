@@ -5,7 +5,7 @@ from api.v1.views import get_questions
 def test_get_all_questions(client):
     expected_result = {
     "questions": [
-         {
+    {
         'id': 1,
         'question': 'What is linting?',
         'answers': {'one': 'Showing syntax errors', 'two': 'Highlight style error'}
@@ -21,4 +21,21 @@ def test_get_all_questions(client):
     assert response.status_code == 200
     assert b'"id":1' in response.data
     assert b'"id":2' in response.data
+    assert expected_result == response.get_json()
+
+
+#  Test if endpoint returns specified question
+def test_fetch_question(client):
+    expected_result = {
+    "question": {
+        "answers": {
+            "one": "Writing tests",
+            "two": "Writing tests before application code"
+        },
+        "id": 2,
+        "question": "What is TDD?"
+    }
+}
+    response = client.get('questions/2')
+    assert response.status_code == 200
     assert expected_result == response.get_json()
