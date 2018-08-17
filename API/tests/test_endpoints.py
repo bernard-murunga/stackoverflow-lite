@@ -39,3 +39,12 @@ def test_fetch_question(client):
     response = client.get('questions/2')
     assert response.status_code == 200
     assert expected_result == response.get_json()
+
+
+# Test if question is posted and status is 201(created)
+def test_post_question(client):
+    response = client.post('/questions', json={
+        "question": "Which python test types do you know?"
+        })
+    assert response.status_code == 201
+    assert b'Which python test types do you know?' in response.data

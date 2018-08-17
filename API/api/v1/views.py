@@ -34,5 +34,17 @@ def get_question(question_id):
     return jsonify({'question': question[0]})
 
 
+@app.route('/questions', methods=['POST'])
+def create_question():
+    if not request.json or not 'question' in request.json:
+        abort(400)
+    question = {
+        'id': questions[-1]['id'] + 1,
+        'question': request.json['question']
+    }
+    questions.append(question)
+    return jsonify({'question': question}), 201
+
+
 if __name__ == '__main__':
     app.run(debug=True)
