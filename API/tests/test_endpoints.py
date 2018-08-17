@@ -48,3 +48,13 @@ def test_post_question(client):
         })
     assert response.status_code == 201
     assert b'Which python test types do you know?' in response.data
+
+
+# Test if answer to particular question is posted
+def test_post_answer(client):
+    response = client.post('/questions/2/answer', json={
+            'answers': { 'three': 'Testing application code'}
+            }
+        )
+    assert response.status_code == 200
+    assert b'{"three":"Testing application code"}' in response.data
