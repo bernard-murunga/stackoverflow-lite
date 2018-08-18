@@ -2,6 +2,7 @@
 [![Build Status](https://travis-ci.com/bernard-murunga/stackoverflow-lite.svg?branch=feature)](https://travis-ci.com/bernard-murunga/stackoverflow-lite)
 [![Coverage Status](https://coveralls.io/repos/github/bernard-murunga/stackoverflow-lite/badge.svg?branch=feature)](https://coveralls.io/github/bernard-murunga/stackoverflow-lite?branch=feature)
 [![Maintainability](https://api.codeclimate.com/v1/badges/661ddfa49e279ba9dba5/maintainability)](https://codeclimate.com/github/bernard-murunga/stackoverflow-lite/maintainability)
+
 This web application allows users to:
 
 1. View a list fo recently asked questions.
@@ -24,6 +25,23 @@ Registered users will be able to view their profile which will contain:
 - HTML5
 - CSS3
 - JavaScript
+- Flask
+
+### Prerequisites
+Run `pip install -r requirements.txt` to install dependancies
+
+## Running tests
+To run this project's tests using pytest:
+
+> Run `python -m pytest API/tests/test_endpoints.py`
+
+To run test coverage using Coverage:
+
+> Run `python -m pytest --cov=API API/tests`
+
+## Deployment
+
+> You can deploy on Heroku by simply integrating your GitHub repo with Heroku.
 
 ## Author
 - Bernard Murunga
