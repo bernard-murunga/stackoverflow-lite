@@ -1,5 +1,5 @@
 import pytest
-from api.v1.views import get_questions
+from API.api.v1.views import get_questions
 
 #  Test if endpoint returns all questions
 def test_get_all_questions(client):
