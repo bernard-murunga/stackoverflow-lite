@@ -11,3 +11,9 @@ script:
 # Coveralls to show test coverage of the modules
 after_success:
   - coveralls
+# deploy on heroku
+deploy:
+  provider: heroku
+  api_key:
+    secure: 5aa6788f-2d78-44de-93fb-5eae5f207d96
+  app: stackoverlite-bernard
