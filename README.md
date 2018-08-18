@@ -1,6 +1,6 @@
 # Stackoverflow-lite
 [![Build Status](https://travis-ci.com/bernard-murunga/stackoverflow-lite.svg?branch=feature)](https://travis-ci.com/bernard-murunga/stackoverflow-lite)
-[![Coverage Status](https://coveralls.io/repos/github/bernard-murunga/stackoverflow-lite/badge.svg?branch=master)](https://coveralls.io/github/bernard-murunga/stackoverflow-lite?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/bernard-murunga/stackoverflow-lite/badge.svg?branch=feature)](https://coveralls.io/github/bernard-murunga/stackoverflow-lite?branch=feature)
 This web application allows users to:
 
 1. View a list fo recently asked questions.
