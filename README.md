@@ -28,6 +28,10 @@ Registered users will be able to view their profile which will contain:
 - Flask
 
 ### Prerequisites
+For macOs/Linux run `python3 -m venv venv` where venv is the name virtual environment folder
+
+For Windows run `py -3 -m venv venv` where venv is the name virtual environment folder
+
 Run `pip install -r requirements.txt` to install dependancies
 
 ## Running tests
